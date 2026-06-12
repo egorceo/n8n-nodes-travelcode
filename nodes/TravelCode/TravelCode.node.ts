@@ -57,18 +57,6 @@ export class TravelCode implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Airports',
-						value: 'listAirports',
-						action: 'List airports',
-						description: 'Get the list of supported airports (IATA, city, country)',
-						routing: {
-							request: {
-								method: 'GET',
-								url: '/v1/data/airports',
-							},
-						},
-					},
-					{
 						name: 'List Airlines',
 						value: 'listAirlines',
 						action: 'List airlines',
@@ -77,6 +65,18 @@ export class TravelCode implements INodeType {
 							request: {
 								method: 'GET',
 								url: '/v1/data/airlines',
+							},
+						},
+					},
+					{
+						name: 'List Airports',
+						value: 'listAirports',
+						action: 'List airports',
+						description: 'Get the list of supported airports (IATA, city, country)',
+						routing: {
+							request: {
+								method: 'GET',
+								url: '/v1/data/airports',
 							},
 						},
 					},
@@ -110,5 +110,6 @@ export class TravelCode implements INodeType {
 				default: 'getCurrentUser',
 			},
 		],
+		usableAsTool: true,
 	};
 }

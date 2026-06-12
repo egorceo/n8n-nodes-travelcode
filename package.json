@@ -1,57 +1,57 @@
 {
-  "name": "n8n-nodes-travelcode",
-  "version": "0.1.1",
-  "description": "n8n community node for the Travel Code corporate travel platform (flights, hotels, rail, transfers, orders)",
-  "keywords": [
-    "n8n-community-node-package",
-    "travel",
-    "travelcode",
-    "flights",
-    "hotels",
-    "corporate-travel"
+ "name": "n8n-nodes-travelcode",
+ "version": "0.1.2",
+ "description": "n8n community node for the Travel Code corporate travel platform (flights, hotels, rail, transfers, orders)",
+ "keywords": [
+  "n8n-community-node-package",
+  "travel",
+  "travelcode",
+  "flights",
+  "hotels",
+  "corporate-travel"
+ ],
+ "license": "MIT",
+ "homepage": "https://travel-code.com",
+ "author": {
+  "name": "Travel Code Inc.",
+  "email": "help@travel-code.com"
+ },
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/egorceo/n8n-nodes-travelcode.git"
+ },
+ "engines": {
+  "node": ">=20.15"
+ },
+ "main": "index.js",
+ "scripts": {
+  "build": "n8n-node build",
+  "build:watch": "tsc --watch",
+  "dev": "n8n-node dev",
+  "lint": "n8n-node lint",
+  "lint:fix": "n8n-node lint --fix",
+  "prepublishOnly": "n8n-node prerelease"
+ },
+ "files": [
+  "dist"
+ ],
+ "n8n": {
+  "n8nNodesApiVersion": 1,
+  "credentials": [
+   "dist/credentials/TravelCodeOAuth2Api.credentials.js"
   ],
-  "license": "MIT",
-  "homepage": "https://travel-code.com",
-  "author": {
-    "name": "Travel Code Inc.",
-    "email": "help@travel-code.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/egorceo/n8n-nodes-travelcode.git"
-  },
-  "engines": {
-    "node": ">=20.15"
-  },
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc && gulp build:icons",
-    "dev": "tsc --watch",
-    "lint": "eslint nodes credentials package.json",
-    "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build"
-  },
-  "files": [
-    "dist"
+  "nodes": [
+   "dist/nodes/TravelCode/TravelCode.node.js"
   ],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/TravelCodeOAuth2Api.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/TravelCode/TravelCode.node.js"
-    ]
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^8.32.0",
-    "eslint": "^9.26.0",
-    "eslint-plugin-n8n-nodes-base": "^1.16.3",
-    "gulp": "^5.0.0",
-    "n8n-workflow": "*",
-    "typescript": "^5.8.2"
-  },
-  "peerDependencies": {
-    "n8n-workflow": "*"
-  }
+  "strict": true
+ },
+ "devDependencies": {
+  "@n8n/node-cli": "*",
+  "eslint": "9.29.0",
+  "prettier": "^3.6.2",
+  "typescript": "^5.9.3"
+ },
+ "peerDependencies": {
+  "n8n-workflow": "*"
+ }
 }

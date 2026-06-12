@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { Icon, ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class TravelCodeOAuth2Api implements ICredentialType {
 	name = 'travelCodeOAuth2Api';
@@ -7,7 +7,9 @@ export class TravelCodeOAuth2Api implements ICredentialType {
 
 	displayName = 'Travel Code OAuth2 API';
 
-	documentationUrl = 'https://apidocs.travel-code.com/';
+	icon: Icon = 'file:../nodes/TravelCode/travelcode.svg';
+
+	documentationUrl = 'https://apidocs.travel-code.com';
 
 	properties: INodeProperties[] = [
 		{
