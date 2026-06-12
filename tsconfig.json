@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2021",
+    "lib": ["es2021"],
+    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist/",
+    "sourceMap": false
+  },
+  "include": ["credentials/**/*", "nodes/**/*"]
+}
